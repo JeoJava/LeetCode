@@ -1,4 +1,4 @@
-package hello.sort;
+package sort;
 
 /**
  * Created with IntelliJ IDEA.
