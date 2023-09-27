@@ -1,7 +1,9 @@
 package tree;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,36 +13,36 @@ import java.util.LinkedList;
  * @Version 1.0
  * @Description:
  */
-public class Tree {
-    private int val;
-    private Tree left;
-    private Tree right;
-    Tree(int val){
+public class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int val){
         this.val = val;
     }
-    static Tree creatTree(Integer[] arr){
+    static TreeNode creatTree(Integer[] arr){
         int len = arr.length;
-        Deque<Tree> deque = new LinkedList<>();
+        Deque<TreeNode> deque = new LinkedList<>();
         if (len == 0 || arr==null) return null;
-        Tree root = new Tree(arr[0]);
+        TreeNode root = new TreeNode(arr[0]);
         deque.offerLast(root);
         for (int i = 1; i < len; i++) {
-            Tree cur = deque.pollFirst();
+            TreeNode cur = deque.pollFirst();
             if (arr[i] != null){
-                Tree left = new Tree(arr[i]);
+                TreeNode left = new TreeNode(arr[i]);
                 cur.left = left;
                 deque.offerLast(left);
             }
             i++;
             if (i<len && arr[i]!=null) {
-                Tree right = new Tree(arr[i]);
+                TreeNode right = new TreeNode(arr[i]);
                 cur.right = right;
                 deque.offerLast(right);
             }
         }
         return root;
     }
-    public static void dfs(Tree root){
+    public static void dfs(TreeNode root){
         if (root!=null){
             dfs(root.left);
             System.out.println(root.val);
@@ -50,8 +52,15 @@ public class Tree {
 
     public static void main(String[] args) {
         Integer[] arr = {1, 2, 3, null, null, 4, null};
-        Tree tree = Tree.creatTree(arr);
-        dfs(tree);
+        TreeNode treeNode = TreeNode.creatTree(arr);
+        dfs(treeNode);
+        Deque<TreeNode> q = new ArrayDeque<>();
+        String s = "[1,2,3]";
+        System.out.println(s.substring(1, s.length() - 1));
+        List<Integer> list = List.of(1, 2);
+        list.add(null);
+        System.out.println(list.toString().substring(1, list.size() - 1));
     }
+
 
 }

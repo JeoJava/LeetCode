@@ -1,5 +1,7 @@
 package sort;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -16,7 +18,7 @@ public class QuickSort implements Sort {
     }
     public void quickSort(int[] arr, int l, int r){
         if (l>=r) return;
-        int i =l , j = r;
+        int i = l , j = r;
         int mid = arr[i];
         while (i<j){
             while (i<j && arr[j] >= mid) j--;
@@ -27,5 +29,6 @@ public class QuickSort implements Sort {
         arr[i] = mid;
         quickSort(arr, l, i-1);
         quickSort(arr, i+1, r);
+        ConcurrentHashMap<Integer, Integer> map = new ConcurrentHashMap<>();
     }
 }
