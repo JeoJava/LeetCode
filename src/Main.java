@@ -21,6 +21,10 @@ public class Main {
         MergeSort mergeSort = new MergeSort();
         int[] arr = new int[]{3,8,2,5,1,4,7,6};
         mergeSort.sort(arr);
+        for (int i : arr) {
+            System.out.print(i+" ");
+        }
+
 
     }
 
