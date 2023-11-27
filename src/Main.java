@@ -19,7 +19,7 @@ public class Main {
     static List<Integer> intList = Arrays.asList(1, 2, 3);
     public static void main(String[] args) {
         MergeSort mergeSort = new MergeSort();
-        int[] arr = new int[]{3,8,2,5,1,4,7,6};
+        int[] arr = new int[]{3,8,2,5,1,4,7,6,11,-1};
         mergeSort.sort(arr);
         for (int i : arr) {
             System.out.print(i+" ");
