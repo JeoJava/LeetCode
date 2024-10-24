@@ -24,6 +24,10 @@ public class Main {
         for (int i : arr) {
             System.out.print(i+" ");
         }
+        int i = 10;
+        for (int j = 0; j < i; j++) {
+            System.out.println(j);
+        }
     }
 
 }
