@@ -5,6 +5,7 @@ import sort.Sort;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,6 +16,7 @@ import java.util.*;
  * @Description:
  */
 public class Main {
+    static List<Integer> intList = Arrays.asList(1, 2, 3);
     public static void main(String[] args) {
 //        PriorityQueue<Integer> queue = new PriorityQueue<>(((o1, o2) -> o2-o1));
 //        Scanner scanner = new Scanner(System.in);
@@ -36,7 +38,7 @@ public class Main {
 //            for (Integer integer : cur) {
 //                if (integer!=null) queue.offer(integer);
 //            }
-            int count = 3;
+            int count = 0;
             for (int j = 1; j <=20 ; j++) {
                 for (int l = 1; l <=20 ; l++) {
                     if (Math.abs(j-l) > 3){
