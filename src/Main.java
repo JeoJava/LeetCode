@@ -18,16 +18,37 @@ import java.util.stream.Collectors;
 public class Main {
     static List<Integer> intList = Arrays.asList(1, 2, 3);
     public static void main(String[] args) {
-        MergeSort mergeSort = new MergeSort();
-        int[] arr = new int[]{3,8,2,5,1,4,7,6,11,-1};
-        mergeSort.sort(arr);
-        for (int i : arr) {
-            System.out.print(i+" ");
+//        PriorityQueue<Integer> queue = new PriorityQueue<>(((o1, o2) -> o2-o1));
+//        Scanner scanner = new Scanner(System.in);
+//        int n = scanner.nextInt(), m = scanner.nextInt();
+//        for (int i = 0; i < m; i++) {
+//            int k = scanner.nextInt(), num = scanner.nextInt();
+//            for (int j = 0; j < k; j++) {
+//                queue.add(num);
+//            }
+//            Integer[] cur = new Integer[n];
+//            int h =0;
+//            while(!queue.isEmpty() && h<n){
+//                int tem = queue.poll();
+//                cur[h++] = tem;
+//                System.out.print(tem);
+//            }
+//            if (i<m-1)
+//                System.out.println();
+//            for (Integer integer : cur) {
+//                if (integer!=null) queue.offer(integer);
+//            }
+            int count = 0;
+            for (int j = 1; j <=20 ; j++) {
+                for (int l = 1; l <=20 ; l++) {
+                    if (Math.abs(j-l) > 3){
+                        count++;
+                        System.out.println(1);
+
+                    }
+                }
+            }
+            System.out.println(count);
         }
-        int i = 10;
-        for (int j = 0; j < i; j++) {
-            System.out.println(j);
-        }
-    }
 
 }
