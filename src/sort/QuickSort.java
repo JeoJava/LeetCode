@@ -29,6 +29,5 @@ public class QuickSort implements Sort {
         arr[i] = mid;
         quickSort(arr, l, i-1);
         quickSort(arr, i+1, r);
-        ConcurrentHashMap<Integer, Integer> map = new ConcurrentHashMap<>();
     }
 }
