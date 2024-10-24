@@ -36,7 +36,7 @@ public class Main {
 //            for (Integer integer : cur) {
 //                if (integer!=null) queue.offer(integer);
 //            }
-            int count = 1;
+            int count = 3;
             for (int j = 1; j <=20 ; j++) {
                 for (int l = 1; l <=20 ; l++) {
                     if (Math.abs(j-l) > 3){
